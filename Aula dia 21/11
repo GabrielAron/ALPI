@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author gabriel.alaraujo
+ */
+public class ex2 {
+    
+    public static int tamanhoVetor() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Tamanho: ");
+        int t = sc.nextInt();
+        return t;
+    }
+    
+    public static int[] criaVetor(int t) {
+        int[] vetor = new int[t];
+        return vetor;
+    }
+    
+    public static int[] populaVetor(int[] v) {
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < v.length; i++) {
+            System.out.printf("vetor[%d]: \n", i);
+            v[i] = sc.nextInt();
+        }
+        return v;
+    }
+    
+    public static void imprimiVetor(int[] v) {
+        for (int i = 0; i < v.length; i++) {
+            System.out.printf("vetor[%d]: %d\n", i, v[i]);
+        }
+    }
+    
+    public static void imprimiNegativod(int [] v ){
+        for (int i = 0; i < v.length; i++){
+            if(v[i]<0)
+                System.out.printf("vetor[%d]: %d\n", i, v[i]);
+        }
+    }
+    
+    public static void main(String[] args) {
+        int t = tamanhoVetor();
+        int[] v = criaVetor(t);
+        v = populaVetor(v);
+        imprimiVetor(v);
+        imprimiNegativod(v);
+    }
+}
